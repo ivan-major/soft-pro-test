@@ -1,7 +1,7 @@
 import type GeoJSON from 'geojson';
 
 interface RealtyObject {
-    id: string;
+    id: number;
     name: string;
     description: string;
     price: number;

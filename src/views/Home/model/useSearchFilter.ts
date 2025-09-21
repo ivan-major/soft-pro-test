@@ -1,5 +1,5 @@
 import { storeToRefs } from 'pinia'
-import { useRealtyStore } from '../model/store';
+import { useRealtyStore } from '@/entities/realty/model/store';
 
 export const useSearchFilter = () => {
     const realtyStore = useRealtyStore();
