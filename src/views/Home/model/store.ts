@@ -7,14 +7,15 @@ export const useRealtyStore = defineStore('realty-store', () => {
     const realtyList = ref<RealtyObject[]>([])
     const limit = ref<number>(10)
     const currentPage = ref<number>(1)
+    const totalPages = ref<number>(0)
 
-    const totalPages = computed(() => {
-        if (!totalRealtyList.value.length) return 0
-        return Math.ceil(totalRealtyList.value.length / limit.value)
-    })
+    const setTotalPages = (list: RealtyObject[]) => {
+        totalPages.value = Math.ceil(list.length / limit.value)
+    }
 
     const setTotalRealtyList = (list: RealtyObject[]) => {
         totalRealtyList.value = list
+        setTotalPages(list)
     }
 
     const setRealtyList = (list: RealtyObject[]) => {
@@ -35,5 +36,6 @@ export const useRealtyStore = defineStore('realty-store', () => {
         setRealtyList,
         setTotalRealtyList,
         setCurrentPage,
+        setTotalPages,
     }
 })
