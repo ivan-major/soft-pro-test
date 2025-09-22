@@ -4,7 +4,7 @@
         transition-all duration-300 ease-in-out 
         sm:p-6 sm:text-lgmd:p-8 md:text-xl lg:p-10 lg:text-2xl"
     >
-        <router-link :to="props.to"><slot /></router-link>
+        <router-link :to="props.to" exact-active-class="border-b-2 border-orange-500"><slot /></router-link>
     </div>
 </template>
 

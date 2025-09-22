@@ -11,12 +11,22 @@ const router = createRouter({
       path: '/',
       component: DefaultLayout,
       children: [
-        { path: '', component: HomePage },
-        { path: 'map', component: MapPage },
+        { path: '', name: 'home', component: HomePage },
+        { path: 'map', name: 'map', component: MapPage },
         { path: 'property/:id', name: 'property', component: PropertyPage },
       ],
     },
   ],
+})
+
+router.beforeEach((to, from, next) => {
+  const restrictedRoutes = ['map', 'property']
+
+  if (!from.name && restrictedRoutes.includes(to.name as string)) {
+    return next({ name: 'home' })
+  }
+
+  next()
 })
 
 export default router

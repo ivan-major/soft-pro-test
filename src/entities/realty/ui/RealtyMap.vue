@@ -1,14 +1,14 @@
 <template>
     <mgl-map
-    :map-style="MAP_STYLE"
-    :center="coordinates"
-    :zoom="zoom"
-    height="500px"
-  >
+        :map-style="MAP_STYLE"
+        :center="coordinates"
+        :zoom="zoom"
+        height="500px"
+    >
     <mgl-marker :coordinates="coordinates">
-      <template v-slot:marker>
-        <div :style="{ backgroundColor: 'red', width: '10px', height: '10px' }"></div>
-      </template>
+        <template v-slot:marker>
+            <div :style="{ backgroundColor: 'red', width: '16px', height: '16px', borderRadius: '50%' }"></div>
+        </template>
     </mgl-marker>
   </mgl-map>
 </template>

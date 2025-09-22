@@ -6,7 +6,7 @@ interface RealtyObject {
     description: string;
     price: number;
     location: string;
-    geometry: GeoJSON.Point;
+    geometry: GeoJSON.Point & { coordinates: [number, number] };
 
 }
 
