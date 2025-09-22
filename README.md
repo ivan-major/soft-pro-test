@@ -36,10 +36,13 @@ npm run build
 # 📂 Project structure (FSD)
 
 src/
- ├─ entities/      # all objects of app, there UI, stores, api
- ├─ layouts/       # page layouts
- ├─ router/        # app routes
- ├─ shared/        # UI-components, utils, static data, helpers
- ├─ views/         # pages (Home, Map, Property)
- ├─ widgets/       # global components, header, footer etc.
- └─ App.vue        # main component
+    ├─ entities/      # all objects of app, there UI, stores, api
+    ├─ layouts/       # page layouts
+    ├─ router/        # app routes
+    ├─ shared/        # UI-components, utils, static data, helpers
+    ├─ views/         # pages (Home, Map, Property)
+    ├─ widgets/       # global components, header, footer etc.
+    └─ App.vue        # main component
+
+# Website
+https://realty-map-soft-pro-test.netlify.app/
